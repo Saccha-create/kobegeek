@@ -1,2 +1,17 @@
 
-<%= link_to "新規投稿ページへ", students_new_path %>
+<%= link_to "新入生入力へ", students_new_path %>
+<div class="tweets-container">
+  <% @students.each do |t| %>
+    <div class="tweet">
+    <b>名前</b>
+      <%= t.name %>
+      <b>プロフィール</b>
+      <%= t.profile %>
+      <b>メンター</b>
+      <%= t.mentor %>
+    <b>学年</b>
+      <%= t.grade %>
+      <%= t.created_at %>
+    </div>
+  <% end %>
+</div>
